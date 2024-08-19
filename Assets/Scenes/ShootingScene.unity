@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 451863314}
   - component: {fileID: 451863317}
   m_Layer: 0
-  m_Name: monster (3)
+  m_Name: monster
   m_TagString: monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
