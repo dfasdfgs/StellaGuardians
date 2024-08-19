@@ -14,18 +14,6 @@ public class bullet : MonoBehaviour
         Rigidbody.velocity = transform.up * speed;
         monster = FindAnyObjectByType<monster>();
 
-        Destroy(gameObject, 3f);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "monster")
-        {
-            monster playerController = GetComponent<monster>();
-
-            if(monster != null)
-            {
-                monster.Die();
-            }
-        }        
+        Destroy(gameObject, 2f);
     }
 }

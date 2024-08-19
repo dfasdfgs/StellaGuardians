@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [HideInInspector]Rigidbody2D Rigidbody2D;
     public float maxspeed;
+    public float BulletTime;
 
     [SerializeField]GameObject bulletins;
 
@@ -17,7 +18,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         move();
-        Die();
         bulletsh();
     }
 
@@ -28,9 +28,11 @@ public class PlayerController : MonoBehaviour
 
     private void bulletsh()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        BulletTime += Time.deltaTime;
+        if (BulletTime > 0.5f)
         {
             Instantiate(bulletins, transform.position, transform.rotation);
+            BulletTime = 0f;
         }
     }
 
