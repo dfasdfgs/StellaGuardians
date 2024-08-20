@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class monster : MonoBehaviour
 {
     public float speed = -1f;
+    public int monsterHP = 40;
+    public Image HPImg;
 
     public void Die()
     {
@@ -14,7 +17,8 @@ public class monster : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        if(!GameManager.Instance.isGameOver)
+           transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,7 +26,18 @@ public class monster : MonoBehaviour
         if (collision.tag == "Bullet")
         {
             Destroy(collision.gameObject);
-            Die();
+            monsterHP -= 10;
+            HPImg.fillAmount -= 0.25f;
+
+            if (monsterHP == 0)
+                Die();
+        }
+
+        if(collision.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+            GameManager.Instance.isGameOver = true;
+            GameManager.Instance.gameovertime();
         }
     }
 
