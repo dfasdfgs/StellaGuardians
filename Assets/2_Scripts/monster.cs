@@ -12,6 +12,7 @@ public class monster : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        ScoreManager.instance.score += 10;
     }
 
 

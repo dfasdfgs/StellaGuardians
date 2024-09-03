@@ -927,6 +927,7 @@ GameObject:
   - component: {fileID: 878096418}
   - component: {fileID: 878096417}
   - component: {fileID: 878096419}
+  - component: {fileID: 878096420}
   m_Layer: 0
   m_Name: manager
   m_TagString: Untagged
@@ -946,6 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160bdd31ee71e354b88b3758a17ad37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIall: []
+  animator: {fileID: 0}
 --- !u!4 &878096418
 Transform:
   m_ObjectHideFlags: 0
@@ -975,6 +978,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverPanal: {fileID: 1941396254}
   isGameOver: 0
+--- !u!114 &878096420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878096416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16ff4a0c4ee8e341a945f61fd4d9fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
 --- !u!1001 &935218679
 PrefabInstance:
   m_ObjectHideFlags: 0
