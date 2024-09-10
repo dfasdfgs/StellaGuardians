@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public int score; 
+    public float score;
+    public float Records;
+
+    public Text scoreText;
+    public Text RecordsText;
 
     // Start is called before the first frame update
-     void Start()
+    void Start()
     {
         instance = this;
     }
@@ -16,6 +21,9 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        score += 1 * Time.deltaTime;
+        Records -= 1 * Time.deltaTime;
+        scoreText.text = "현재 위치 : \n" + score.ToString("F0") + "KM";
+        RecordsText.text = "구조까지 : \n" + Records.ToString("F0") + "KM";
     }
 }

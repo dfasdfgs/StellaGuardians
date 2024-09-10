@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject GameoverPanal;
     public bool isGameOver = false;
+    public Text GameOvertext;
 
     private void Awake()
     {
@@ -24,5 +26,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         GameoverPanal.SetActive(true);
+
+        GameOvertext.text = "이동한 거리 : " + ScoreManager.instance.score.ToString("F0") + "KM";
     }
 }
