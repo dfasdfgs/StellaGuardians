@@ -6,7 +6,7 @@ public class Bulletmonster : MonoBehaviour
     void Start()
     {
         PlayerVec = FindAnyObjectByType<PlayerController>().transform.position;
-        Destroy(gameObject, 1.1f);
+        Destroy(gameObject, 1.3f);
     }
 
     void Update()
