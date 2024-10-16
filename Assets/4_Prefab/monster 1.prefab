@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8091150900123943326}
   - component: {fileID: 8618517862905352505}
   m_Layer: 0
-  m_Name: monster
+  m_Name: monster 1
   m_TagString: monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c4d45a5e8745def40b9af7353d7107d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21b3aba7323b00c42b81f7c225595b58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
