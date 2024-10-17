@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1848, y: 2960}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 819059369}
   - component: {fileID: 819059368}
   m_Layer: 0
-  m_Name: "\uC624\uBE0C\uC81D\uD2B81"
+  m_Name: roket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,8 +371,8 @@ Transform:
   m_GameObject: {fileID: 819059367}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.29, z: 0}
-  m_LocalScale: {x: 0.11251012, y: 0.11251012, z: 0.11251012}
+  m_LocalPosition: {x: -0.04, y: -0.0262, z: 0}
+  m_LocalScale: {x: 0.099808715, y: 0.099808715, z: 0.099808715}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 1399910799}
   - component: {fileID: 1399910798}
   m_Layer: 0
-  m_Name: "\uD0C0\uC774\uD2C0"
+  m_Name: Tatle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 1412082420}
   - component: {fileID: 1412082419}
   m_Layer: 0
-  m_Name: "\uD0C0\uC774\uD2C0 \uBC30\uACBD"
+  m_Name: TatleBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,8 +677,8 @@ Transform:
   m_GameObject: {fileID: 1412082418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -0.06, z: -1}
-  m_LocalScale: {x: 0.10273645, y: 0.10273645, z: 0.10273645}
+  m_LocalPosition: {x: -0.0115, y: 0.005, z: -1}
+  m_LocalScale: {x: 0.102691144, y: 0.102691144, z: 0.102691144}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 1719668858}
   - component: {fileID: 1719668860}
   m_Layer: 0
-  m_Name: "\uC624\uBE0C\uC81D\uD2B82"
+  m_Name: planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -916,8 +916,8 @@ Transform:
   m_GameObject: {fileID: 1719668857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.8, z: 0}
-  m_LocalScale: {x: 0.08793019, y: 0.08793019, z: 0.08793019}
+  m_LocalPosition: {x: -0.07, y: 0.96, z: 0}
+  m_LocalScale: {x: 0.09002293, y: 0.09002293, z: 0.09002293}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -930,7 +930,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719668857}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6eb4a42e0e6cbaa4f930714bb4013bfa, type: 2}
   m_CullingMode: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 1828549647}
   - component: {fileID: 1828549646}
   m_Layer: 0
-  m_Name: "\uD30C\uD2F0\uD074"
+  m_Name: paticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1149,8 +1149,8 @@ Transform:
   m_GameObject: {fileID: 1828549645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0119, y: -0.4071, z: 0}
-  m_LocalScale: {x: 0.080919996, y: 0.09183787, z: 0.09068616}
+  m_LocalPosition: {x: -0.0075, y: 0.028, z: 0}
+  m_LocalScale: {x: 0.08916097, y: 0.10119074, z: 0.09992173}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

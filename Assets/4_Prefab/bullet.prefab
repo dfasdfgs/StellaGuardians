@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2598449196599838305}
   - component: {fileID: 6937525782534635854}
   - component: {fileID: -8145526045861576964}
-  - component: {fileID: 6716003772342579650}
+  - component: {fileID: 1609701542547619148}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -163,7 +163,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0027598322, y: -0.002297783}
   m_Size: {x: 0.060428057, y: 0.23470193}
   m_Direction: 0
---- !u!95 &6716003772342579650
+--- !u!95 &1609701542547619148
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ Animator:
   m_GameObject: {fileID: 4268478172312240417}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8a598f2529b38234eaa1283e56f72934, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6734daeff088bf345b30b47c77bab01b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

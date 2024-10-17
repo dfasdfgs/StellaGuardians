@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
             score += 1 * Time.deltaTime;
             Records -= 1 * Time.deltaTime;
             scoreText.text = score.ToString("F0") + "KM";
-            RecordsText.text = "구조까지 : \n" + Records.ToString("F0") + "KM";
+            RecordsText.text = "구조까지\n: " + Records.ToString("F0") + "KM";
         }
     }
 }
