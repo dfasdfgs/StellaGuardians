@@ -876,6 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameoverPanal: {fileID: 1814913924}
   isGameOver: 0
+  isGameClear: 0
   GameOvertext: {fileID: 174818754}
 --- !u!114 &878096420
 MonoBehaviour:
@@ -985,8 +986,8 @@ Transform:
   m_GameObject: {fileID: 950579579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 3.24, z: 0}
-  m_LocalScale: {x: 0.55219847, y: 0.55219847, z: 0.55219847}
+  m_LocalPosition: {x: -0.1, y: 3.83, z: 0}
+  m_LocalScale: {x: 0.62060213, y: 0.62060213, z: 0.62060213}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

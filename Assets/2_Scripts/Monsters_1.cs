@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,8 +15,8 @@ public class Monsters_1 : MonoBehaviour
 
     private void Update()
     {
-        if(!GameManager.Instance.isGameOver)
-           transform.Translate(Vector3.down * speed * Time.deltaTime);
+        if (!GameManager.Instance.isGameOver)
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,12 +31,11 @@ public class Monsters_1 : MonoBehaviour
                 Die();
         }
 
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             Destroy(collision.gameObject);
             GameManager.Instance.isGameOver = true;
             GameManager.Instance.gameovertime();
         }
     }
-
 }

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +9,7 @@ public class BtnManager : MonoBehaviour
 
     public void OnShootingSceneGO()
     {
-        SceneManager.LoadScene("ShootingScene");
+        SceneManager.LoadScene("Stage1Scene");
     }
     public void OnMainSceneGO()
     {

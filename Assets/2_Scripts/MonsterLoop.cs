@@ -14,10 +14,13 @@ public class MonsterLoop : MonoBehaviour
 
         timeSpawn += Time.deltaTime;
 
-        if(timeSpawn > randomspawn)
+        if (!GameManager.Instance.isGameClear)
         {
-            monstSpawn();
-            timeSpawn = 0f;
+            if (timeSpawn > randomspawn)
+            {
+                monstSpawn();
+                timeSpawn = 0f;
+            }
         }
     }
 
@@ -25,5 +28,4 @@ public class MonsterLoop : MonoBehaviour
     {
         Instantiate(monsterSpawn);
     }
-
 }

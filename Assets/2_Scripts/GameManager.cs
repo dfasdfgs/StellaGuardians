@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject GameoverPanal;
     public bool isGameOver = false;
+    public bool isGameClear = false;
     public Text GameOvertext;
 
     private void Awake()
@@ -19,7 +18,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (ScoreManager.instance.score >= 200)
+        {
+            isGameClear = true;
+        }
 
+        if (isGameClear)
+        {
+            Time.timeScale = 0f;
+            GameoverPanal.SetActive(true);
+
+            GameOvertext.text = " 게임 클리어 ";
+        }
     }
 
     public void gameovertime()
