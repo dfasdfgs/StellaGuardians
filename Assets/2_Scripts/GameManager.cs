@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (ScoreManager.instance.score >= 200)
+        if (ScoreManager.instance.score >= ScoreManager.instance.Records)
         {
             isGameClear = true;
         }

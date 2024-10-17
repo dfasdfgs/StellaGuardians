@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class MonsterLoop : MonoBehaviour
 {
-    public float timeSpawnMin = 3.25f;
-    public float timeSpawnMax = 5.25f;
+    public float timeSpawnMin = 4.25f;
+    public float timeSpawnMax = 7.25f;
     public float timeSpawn;
 
-    public GameObject monsterSpawn;
+    public GameObject monster11Spawn;
+    float randomspawn = 5;
+
+
+    public Transform[] enemySpwans;
+    public GameObject monster22Spawn;
+    float mon22Time;
+    int enemyCount;
+    int[] randomCount;
+
 
     private void Update()
     {
-        float randomspawn = 5;
 
         timeSpawn += Time.deltaTime;
 
@@ -18,14 +26,34 @@ public class MonsterLoop : MonoBehaviour
         {
             if (timeSpawn > randomspawn)
             {
-                monstSpawn();
+                monst1Spawn();
+                Randome();
                 timeSpawn = 0f;
             }
         }
     }
 
-    private void monstSpawn()
+    private void monst1Spawn()
     {
-        Instantiate(monsterSpawn);
+        Instantiate(monster11Spawn);
     }
+
+    private void monst2Spawn()
+    {
+        Instantiate(monster11Spawn);
+    }
+
+    private void Randome()
+    {
+        randomspawn = Random.Range(timeSpawnMin, timeSpawnMax);
+    }    
+    
+    
+    private void RandomPos()
+    {
+        for(int i = 0; i < enet)
+
+        randomCount[i] = Random.Range(timeSpawnMin, timeSpawnMax);
+    }
+
 }
