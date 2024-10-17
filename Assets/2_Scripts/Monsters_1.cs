@@ -24,10 +24,10 @@ public class Monsters_1 : MonoBehaviour
         if (collision.tag == "Bullet")
         {
             Destroy(collision.gameObject);
-            monsterHP -= 10;
-            HPImg.fillAmount -= 0.25f;
+            monsterHP -= 15;
+            HPImg.fillAmount -= 0.33f;
 
-            if (monsterHP == 0)
+            if (monsterHP <= 0)
                 Die();
         }
 

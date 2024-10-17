@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class MonsterLoop : MonoBehaviour
 {
-    public float timeSpawnMin = 4.25f;
-    public float timeSpawnMax = 7.25f;
-    public float timeSpawn;
+    public float timeSpawnMin = 3.25f;
+    public float timeSpawnMax = 6.25f;
+    float timeSpawn11;
 
     public GameObject monster11Spawn;
     float randomspawn = 5;
@@ -12,23 +12,34 @@ public class MonsterLoop : MonoBehaviour
 
     public Transform[] enemySpwans;
     public GameObject monster22Spawn;
-    float mon22Time;
+    float mon22Time = 5;
+    float timeSpawn22;
     int enemyCount;
-    int[] randomCount;
+    int randomCount;
 
 
     private void Update()
     {
-
-        timeSpawn += Time.deltaTime;
+        timeSpawn22 += Time.deltaTime;
+        timeSpawn11 += Time.deltaTime;
 
         if (!GameManager.Instance.isGameClear)
         {
-            if (timeSpawn > randomspawn)
+            if (timeSpawn11 > randomspawn)
             {
                 monst1Spawn();
                 Randome();
-                timeSpawn = 0f;
+                timeSpawn11 = 0f;
+            }
+
+            if (timeSpawn22 > mon22Time)
+            {
+                RandomPos();
+
+                GameObject tmp =  GameObject.Instantiate(monster22Spawn);
+                tmp.transform.position = enemySpwans[randomCount].position;
+
+                timeSpawn22 = 0f;
             }
         }
     }
@@ -38,22 +49,22 @@ public class MonsterLoop : MonoBehaviour
         Instantiate(monster11Spawn);
     }
 
-    private void monst2Spawn()
-    {
-        Instantiate(monster11Spawn);
-    }
-
     private void Randome()
     {
+        if(ScoreManager.instance.score <= 60)
+        {
         randomspawn = Random.Range(timeSpawnMin, timeSpawnMax);
-    }    
-    
-    
+        }
+        else
+        {
+            randomspawn = Random.Range(1, 3);
+        }
+    }
+
+
     private void RandomPos()
     {
-        for(int i = 0; i < enet)
-
-        randomCount[i] = Random.Range(timeSpawnMin, timeSpawnMax);
+            randomCount = Random.Range(0, 5);
     }
 
 }
