@@ -36,7 +36,7 @@ public class MonsterLoop : MonoBehaviour
             {
                 RandomPos();
 
-                GameObject tmp =  GameObject.Instantiate(monster22Spawn);
+                GameObject tmp = GameObject.Instantiate(monster22Spawn);
                 tmp.transform.position = enemySpwans[randomCount].position;
 
                 timeSpawn22 = 0f;
@@ -51,20 +51,20 @@ public class MonsterLoop : MonoBehaviour
 
     private void Randome()
     {
-        if(ScoreManager.instance.score <= 60)
+        if (ScoreManager.instance.score >= 40)
         {
-        randomspawn = Random.Range(timeSpawnMin, timeSpawnMax);
+            randomspawn = Random.Range(1, 2.5f);
         }
         else
         {
-            randomspawn = Random.Range(1, 3);
+            randomspawn = Random.Range(timeSpawnMin, timeSpawnMax);
         }
     }
 
 
     private void RandomPos()
     {
-            randomCount = Random.Range(0, 5);
+        randomCount = Random.Range(0, 5);
     }
 
 }

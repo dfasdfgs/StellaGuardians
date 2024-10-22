@@ -5,7 +5,8 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
     public float score = 0;
-    public float Records = 150;
+    public float Records = 120;
+    public float total = 120;
 
     public Text scoreText;
     public Text RecordsText;

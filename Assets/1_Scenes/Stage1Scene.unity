@@ -1011,7 +1011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  Records: 150
+  Records: 120
+  total: 120
   scoreText: {fileID: 2092880353}
   RecordsText: {fileID: 525823797}
 --- !u!114 &878096421

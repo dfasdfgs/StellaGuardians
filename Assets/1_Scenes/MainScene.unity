@@ -1162,7 +1162,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB3C4\uB2EC\uAE4C\uC9C0 150KM"
+  m_Text: "\uB3C4\uB2EC\uAE4C\uC9C0 120KM"
 --- !u!222 &377281792
 CanvasRenderer:
   m_ObjectHideFlags: 0
