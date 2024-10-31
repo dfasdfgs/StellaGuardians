@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public bool isGameOver = false;
     public bool isGameClear = false;
     public Text GameOvertext;
+    public Text CoinText;
+
+    public int Coin;
 
     private void Awake()
     {
@@ -30,6 +33,8 @@ public class GameManager : MonoBehaviour
 
             GameOvertext.text = " 게임 클리어 ";
         }
+
+        CoinText.text = " : " + Coin.ToString();
     }
 
     public void gameovertime()
