@@ -29,13 +29,4 @@ public class Monsters_2 : MonoBehaviour
 
         Destroy(gameObject, 5f);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-            GameManager.Instance.isGameOver = true;
-            GameManager.Instance.gameovertime();
-        }
-    }
 }

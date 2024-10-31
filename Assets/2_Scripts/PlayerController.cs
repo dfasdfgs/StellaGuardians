@@ -6,8 +6,18 @@ public class PlayerController : MonoBehaviour
     public float maxspeed;
     public float BulletTime;
     public Transform spwanObject;
+    SpriteRenderer spriteRenderer;
+
+    public bool isRespawnTime = false;
 
     [SerializeField] GameObject bulletins;
+
+    void Awake()
+    {
+
+        spriteRenderer = GetComponent<SpriteRenderer>(); //색깔을 바꾸기 때문에 변수 선언 필요 
+    }
+
 
     void Start()
     {
@@ -16,7 +26,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.isGameOver || !GameManager.Instance.isGameClear)
+
+        if (GameManager.Instance.isGameOver == false)
         {
             move();
             bulletsh();
@@ -27,6 +38,25 @@ public class PlayerController : MonoBehaviour
                 ObjectMove();
             }
         }
+
+    }
+
+    void Unbeatable()
+    {
+        isRespawnTime = !isRespawnTime;
+
+        if (isRespawnTime) //무적 타임 이펙트 (투명)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 0.5f);
+
+
+        }
+        else
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 1); //무적 타임 종료(원래대로)
+        }
+
+
     }
 
     public void Die()
@@ -68,4 +98,23 @@ public class PlayerController : MonoBehaviour
 
         spwanObject.transform.position = mousePos;
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "monster")
+        {
+
+
+
+            if (isRespawnTime) //무적 시간이면 적에게 맞지 않음
+                return;
+            GameManager.Instance.Damage(15);
+
+
+            Unbeatable();
+            Invoke("Unbeatable", 1f);
+        }
+    }
+
 }

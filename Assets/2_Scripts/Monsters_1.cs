@@ -30,12 +30,5 @@ public class Monsters_1 : MonoBehaviour
             if (monsterHP <= 0)
                 Die();
         }
-
-        if (collision.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-            GameManager.Instance.isGameOver = true;
-            GameManager.Instance.gameovertime();
-        }
     }
 }
