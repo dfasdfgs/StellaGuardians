@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameObject GameoverPanal;
+
+    public GameObject ScorePanelUI;
+    public GameObject settingBTNUI;
+    public GameObject CoinUI;
+    public GameObject HPUI;
+
     public bool isGameOver = false;
     public bool isGameClear = false;
     public Text GameOvertext;
@@ -57,10 +64,11 @@ public class GameManager : MonoBehaviour
 
         if (isGameClear)
         {
-            Time.timeScale = 0f;
-            GameoverPanal.SetActive(true);
+            ScorePanelUI.SetActive(false);
+            settingBTNUI.SetActive(false);
+            HPUI.SetActive(false);
+            CoinUI.SetActive(false);
 
-            GameOvertext.text = " 게임 클리어 ";
         }
 
         CoinText.text = " : " + Coin.ToString();
@@ -74,5 +82,11 @@ public class GameManager : MonoBehaviour
         GameoverPanal.SetActive(true);
 
         GameOvertext.text = "이동한 거리 : " + ScoreManager.instance.score.ToString("F0") + "KM";
+    }
+
+    IEnumerator boss()
+    {
+
+        yield break;
     }
 }
