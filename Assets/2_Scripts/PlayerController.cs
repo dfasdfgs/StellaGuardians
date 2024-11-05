@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     private void bulletsh()
     {
-        if (GameManager.Instance.isGameClear)
+        if (GameManager.Instance.isGameBoss)
             return;
 
         BulletTime += Time.deltaTime;

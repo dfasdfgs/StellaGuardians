@@ -9,19 +9,23 @@ public class GameManager : MonoBehaviour
     public GameObject GameoverPanal;
 
     public GameObject ScorePanelUI;
+    public GameObject Boss1;
+    public GameObject spawner;
     public GameObject settingBTNUI;
     public GameObject CoinUI;
     public GameObject HPUI;
+    public GameObject BossHPUI;
     public GameObject BossText;
 
     public bool isGameOver = false;
-    public bool isGameClear = false;
+    public bool isGameBoss = false;
     public Text GameOvertext;
     public Text CoinText;
     float curHealth; //* 현재 체력
     public float maxHealth; //* 최대 체력
 
     public Slider HpBarSlider;
+    public Slider BossHpBarSlider;
 
     public int Coin;
 
@@ -39,6 +43,8 @@ public class GameManager : MonoBehaviour
     {
         if (HpBarSlider != null)
             HpBarSlider.value = curHealth;
+        if (BossHpBarSlider != null)
+            BossHpBarSlider.value = curHealth;
     }
 
     public void Damage(float damage) //* 데미지 받는 함수
@@ -60,15 +66,15 @@ public class GameManager : MonoBehaviour
     {
         if (ScoreManager.instance.score >= 120)
         {
-            isGameClear = true;
+            isGameBoss = true;
         }
 
-        if (isGameClear)
+        if (isGameBoss)
         {
+            spawner.SetActive(false);
             ScorePanelUI.SetActive(false);
             settingBTNUI.SetActive(false);
             HPUI.SetActive(false);
-            CoinUI.SetActive(false);
 
             BossText.SetActive(true);
 
@@ -90,8 +96,14 @@ public class GameManager : MonoBehaviour
 
     IEnumerator boss()
     {
+        BossHPUI.SetActive(true);
+        Boss1.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        BossText.SetActive(false);
+        isGameBoss = false;
 
-        isGameClear = false;
+        
+        spawner.SetActive(true);
         yield break;
     }
 

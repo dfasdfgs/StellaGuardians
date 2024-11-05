@@ -23,7 +23,7 @@ public class MonsterLoop : MonoBehaviour
         timeSpawn22 += Time.deltaTime;
         timeSpawn11 += Time.deltaTime;
 
-        if (!GameManager.Instance.isGameClear)
+        if (!GameManager.Instance.isGameBoss)
         {
             if (timeSpawn11 > randomspawn)
             {

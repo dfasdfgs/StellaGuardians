@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.isGameClear)
+        if (!GameManager.Instance.isGameBoss)
         {
             score += 1 * Time.deltaTime;
             Records -= 1 * Time.deltaTime;
