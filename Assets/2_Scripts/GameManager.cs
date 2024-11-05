@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject settingBTNUI;
     public GameObject CoinUI;
     public GameObject HPUI;
+    public GameObject BossText;
 
     public bool isGameOver = false;
     public bool isGameClear = false;
@@ -69,6 +70,9 @@ public class GameManager : MonoBehaviour
             HPUI.SetActive(false);
             CoinUI.SetActive(false);
 
+            BossText.SetActive(true);
+
+            StartCoroutine(boss());
         }
 
         CoinText.text = " : " + Coin.ToString();
@@ -87,6 +91,9 @@ public class GameManager : MonoBehaviour
     IEnumerator boss()
     {
 
+        isGameClear = false;
         yield break;
     }
+
+
 }

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] BossmainSP;
+    public GameObject[] BulletSP;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

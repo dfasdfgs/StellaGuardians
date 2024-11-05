@@ -6,6 +6,7 @@ public class Monsters_1 : MonoBehaviour
     public float speed = -1f;
     public int monsterHP = 40;
     public Image HPImg;
+    public GameObject coinnn;
 
     public void Die()
     {
@@ -28,7 +29,11 @@ public class Monsters_1 : MonoBehaviour
             HPImg.fillAmount -= 0.33f;
 
             if (monsterHP <= 0)
+            {
+                Instantiate(coinnn,this.transform.position, Quaternion.identity);
                 Die();
+            }
+
         }
     }
 }
