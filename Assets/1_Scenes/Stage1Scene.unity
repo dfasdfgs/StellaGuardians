@@ -135,13 +135,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss1
       objectReference: {fileID: 0}
+    - target: {fileID: 3024380664303035398, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591853026580682325, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
+      propertyPath: BossHpBarSlider
+      value: 
+      objectReference: {fileID: 262061034}
+    - target: {fileID: 5886528850082196276, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
+      propertyPath: m_Value
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886528850082196276, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
+      propertyPath: m_MaxValue
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 7309694621168921532, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7309694621168921532, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7309694621168921532, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.801758
       objectReference: {fileID: 0}
     - target: {fileID: 9213380442043784414, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
       propertyPath: m_LocalPosition.x
@@ -692,6 +712,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253549894}
   m_CullTransparentMesh: 1
+--- !u!114 &262061034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5886528850082196276, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
+  m_PrefabInstance: {fileID: 39068810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &279427772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527463661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1485,7 +1516,7 @@ RectTransform:
   m_Father: {fileID: 1242453566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5.589905, y: 0.28230286}
   m_SizeDelta: {x: 0.5062, y: -42.3472}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2194,6 +2225,7 @@ MonoBehaviour:
   BossText: {fileID: 733638824}
   isGameOver: 0
   isGameBoss: 1
+  isGameClear: 0
   GameOvertext: {fileID: 174818754}
   CoinText: {fileID: 590416193}
   maxHealth: 50

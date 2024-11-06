@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false;
     public bool isGameBoss = false;
+    public bool isGameClear = false;
+
     public Text GameOvertext;
     public Text CoinText;
     float curHealth; //* 현재 체력
@@ -93,6 +95,15 @@ public class GameManager : MonoBehaviour
 
         GameOvertext.text = "이동한 거리 : " + ScoreManager.instance.score.ToString("F0") + "KM";
     }
+
+    public void gameClear()
+    {
+        if (isGameClear == true)
+        {
+             
+        }
+    }
+
 
     IEnumerator boss()
     {
