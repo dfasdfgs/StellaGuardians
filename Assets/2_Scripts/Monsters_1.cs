@@ -8,6 +8,8 @@ public class Monsters_1 : MonoBehaviour
     public Image HPImg;
     public GameObject coinnn;
 
+
+
     public void Die()
     {
         Destroy(gameObject);
@@ -30,7 +32,10 @@ public class Monsters_1 : MonoBehaviour
 
             if (monsterHP <= 0)
             {
-                Instantiate(coinnn,this.transform.position, Quaternion.identity);
+                if (!GameManager.Instance.isGameBoss)
+                {
+                Instantiate(coinnn, this.transform.position, Quaternion.identity);
+                }
                 Die();
             }
 

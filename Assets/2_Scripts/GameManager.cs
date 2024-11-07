@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public bool isGameOver = false;
     public bool isGameBoss = false;
     public bool isGameClear = false;
+    public bool isGameGO = false;
+    public bool isBullet = true;
 
     public Text GameOvertext;
     public Text CoinText;
@@ -73,6 +75,10 @@ public class GameManager : MonoBehaviour
 
         if (isGameBoss)
         {
+            if (isGameGO)
+                return;
+
+            isBullet = false;
             spawner.SetActive(false);
             ScorePanelUI.SetActive(false);
             settingBTNUI.SetActive(false);
@@ -98,23 +104,25 @@ public class GameManager : MonoBehaviour
 
     public void gameClear()
     {
-        if (isGameClear == true)
-        {
-             
-        }
+        Time.timeScale = 0f;
+        isGameOver = true;
+        GameoverPanal.SetActive(true);
+        GameOvertext.text = "구출 성공적!";
     }
 
 
     IEnumerator boss()
     {
         BossHPUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+
         Boss1.SetActive(true);
         yield return new WaitForSeconds(5f);
         BossText.SetActive(false);
-        isGameBoss = false;
 
-        
         spawner.SetActive(true);
+        isBullet = true;
+        isGameGO = true;
         yield break;
     }
 

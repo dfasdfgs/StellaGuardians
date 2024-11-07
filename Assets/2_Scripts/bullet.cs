@@ -8,7 +8,7 @@ public class bullet : MonoBehaviour
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 3f);
     }
 
     private void Update()

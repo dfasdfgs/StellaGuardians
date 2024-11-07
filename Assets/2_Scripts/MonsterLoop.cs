@@ -23,25 +23,23 @@ public class MonsterLoop : MonoBehaviour
         timeSpawn22 += Time.deltaTime;
         timeSpawn11 += Time.deltaTime;
 
-        if (!GameManager.Instance.isGameBoss)
+        if (timeSpawn11 > randomspawn)
         {
-            if (timeSpawn11 > randomspawn)
-            {
-                monst1Spawn();
-                Randome();
-                timeSpawn11 = 0f;
-            }
-
-            if (timeSpawn22 > mon22Time)
-            {
-                RandomPos();
-
-                GameObject tmp = GameObject.Instantiate(monster22Spawn);
-                tmp.transform.position = enemySpwans[randomCount].position;
-
-                timeSpawn22 = 0f;
-            }
+            monst1Spawn();
+            Randome();
+            timeSpawn11 = 0f;
         }
+
+        if (timeSpawn22 > mon22Time)
+        {
+            RandomPos();
+
+            GameObject tmp = GameObject.Instantiate(monster22Spawn);
+            tmp.transform.position = enemySpwans[randomCount].position;
+
+            timeSpawn22 = 0f;
+        }
+
     }
 
     private void monst1Spawn()

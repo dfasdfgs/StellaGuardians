@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class dlfmaanjffhgkwl : MonoBehaviour
@@ -9,9 +7,12 @@ public class dlfmaanjffhgkwl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < obstacles.Length; i++)
+
+        Destroy(gameObject, 12f);
+
+        for (int i = 0; i < obstacles.Length; i++)
         {
-            if(Random.Range(0,4) == 0)
+            if (Random.Range(0, 4) == 0)
             {
                 obstacles[i].gameObject.SetActive(false);
             }

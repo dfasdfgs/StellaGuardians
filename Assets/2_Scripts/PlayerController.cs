@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     public float maxspeed;
     public float BulletTime;
     public Transform spwanObject;
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     public bool isRespawnTime = false;
 
@@ -66,14 +66,14 @@ public class PlayerController : MonoBehaviour
 
     private void bulletsh()
     {
-        if (GameManager.Instance.isGameBoss)
-            return;
-
-        BulletTime += Time.deltaTime;
-        if (BulletTime > 0.5f)
+        if (GameManager.Instance.isBullet)
         {
-            Instantiate(bulletins, transform.position, transform.rotation);
-            BulletTime = 0f;
+            BulletTime += Time.deltaTime;
+            if (BulletTime > 0.5f)
+            {
+                Instantiate(bulletins, transform.position, transform.rotation);
+                BulletTime = 0f;
+            }
         }
     }
 
@@ -107,9 +107,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.tag == "monster")
         {
-
-
-
             if (isRespawnTime) //무적 시간이면 적에게 맞지 않음
                 return;
             GameManager.Instance.Damage(15);

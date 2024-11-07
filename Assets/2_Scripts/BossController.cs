@@ -12,7 +12,7 @@ public class BossController : MonoBehaviour
 
     public void Die()
     {
-        GameManager.Instance.isGameClear = true;
+        GameManager.Instance.gameClear();
         Destroy(gameObject);
     }
 
@@ -36,11 +36,6 @@ public class BossController : MonoBehaviour
         }
     }
 
-
-    private void Update()
-    {
-
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

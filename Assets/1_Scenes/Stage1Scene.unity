@@ -139,18 +139,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3591853026580682325, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
-      propertyPath: BossHpBarSlider
-      value: 
-      objectReference: {fileID: 262061034}
-    - target: {fileID: 5886528850082196276, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
-      propertyPath: m_Value
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5886528850082196276, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
-      propertyPath: m_MaxValue
-      value: 1500
-      objectReference: {fileID: 0}
     - target: {fileID: 7309694621168921532, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -158,10 +146,6 @@ PrefabInstance:
     - target: {fileID: 7309694621168921532, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309694621168921532, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 4.801758
       objectReference: {fileID: 0}
     - target: {fileID: 9213380442043784414, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
       propertyPath: m_LocalPosition.x
@@ -712,17 +696,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253549894}
   m_CullTransparentMesh: 1
---- !u!114 &262061034 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5886528850082196276, guid: 0c7dc112faa79f44e8294665cf31b637, type: 3}
-  m_PrefabInstance: {fileID: 39068810}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &279427772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,8 +2197,10 @@ MonoBehaviour:
   BossHPUI: {fileID: 527463660}
   BossText: {fileID: 733638824}
   isGameOver: 0
-  isGameBoss: 1
+  isGameBoss: 0
   isGameClear: 0
+  isGameGO: 0
+  isBullet: 1
   GameOvertext: {fileID: 174818754}
   CoinText: {fileID: 590416193}
   maxHealth: 50
@@ -4295,8 +4270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: 1032}
-  m_SizeDelta: {x: 176.9561, y: 176.9561}
+  m_AnchoredPosition: {x: 144, y: 1046}
+  m_SizeDelta: {x: 220.4838, y: 220.4838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041186372
 MonoBehaviour:
@@ -4318,7 +4293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e275e9f15c58d384f9346765f69e49d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d12c260edad32714a8e5faf746a910e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4463,7 +4438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2092880351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4779,21 +4754,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3658919592478665664, guid: 280e9438fd3ae2f4cbd64dd9d8bcf608, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 8100010935226856830}
     - target: {fileID: 5993495273067929754, guid: 280e9438fd3ae2f4cbd64dd9d8bcf608, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4721649479710225717, guid: 280e9438fd3ae2f4cbd64dd9d8bcf608, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280e9438fd3ae2f4cbd64dd9d8bcf608, type: 3}
+--- !u!212 &8100010935226856830 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1166463430653252409, guid: 280e9438fd3ae2f4cbd64dd9d8bcf608, type: 3}
+  m_PrefabInstance: {fileID: 8100010935226856829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 8100010935226856829}
   - {fileID: 863216446}
   - {fileID: 580280104}
   - {fileID: 1853126610}
@@ -4804,3 +4788,4 @@ SceneRoots:
   - {fileID: 2145142033}
   - {fileID: 194459059}
   - {fileID: 39068810}
+  - {fileID: 8100010935226856829}
